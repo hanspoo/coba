@@ -1,12 +1,27 @@
 'use client';
 import { Footer, Header, StoreProvider } from '@coba/components';
+import Image from 'next/image';
+
+const phone = process.env.PHONE || '56978839454';
+// const phone = '56993199305';
 
 export function MainLayout({ children }: React.PropsWithChildren) {
   return (
-    <div className="mx-auto max-w-screen-xl h-screen flex flex-col justify-between">
+    <div className="mx-auto max-w-screen-xl h-screen flex flex-col justify-between relative">
       <div>
         <Header />
         <div>{children}</div>
+        <a
+          href={`https://wa.me/${phone}?text=Consulta%20sobre%20neumáticos%20o%20servicios`}
+        >
+          <Image
+            width={378 / 1.5}
+            height={80 / 1.5}
+            className="bottom-6 right-4 fixed"
+            alt="wtsp"
+            src="/images/wtsp.png"
+          />
+        </a>
       </div>
       <Footer />
     </div>
