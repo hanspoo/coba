@@ -2,7 +2,7 @@ services:
   web:
     build: .
     environment:
-      - REDIS_HOST: redis
+      - REDIS_HOST: 'redis'
     ports:
       - '3005:3000'
   redis:
