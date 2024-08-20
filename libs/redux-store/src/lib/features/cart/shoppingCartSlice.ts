@@ -27,7 +27,7 @@ const INITIAL: StateType = {
   status: 'idle',
   cart: undefined,
   error: '',
-  theme: 'nord',
+  theme: 'aqua',
 };
 
 //Reducer

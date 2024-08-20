@@ -15,6 +15,7 @@ module.exports = {
   },
   daisyui: {
     themes: [
+      'aqua',
       'light',
       'dark',
       'cupcake',
@@ -28,7 +29,7 @@ module.exports = {
       'halloween',
       'garden',
       'forest',
-      'aqua',
+
       'lofi',
       'pastel',
       'fantasy',
