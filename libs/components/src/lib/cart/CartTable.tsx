@@ -20,10 +20,10 @@ export function CartTable({ cart }: { cart: Cart }) {
       <thead>
         <tr>
           <th className="w-[60%] p-1">Producto</th>
-          <th className="w-[10%] p-1">Cant</th>
-          <th className="w-[20%] p-1">Valor</th>
-          <th className="w-[20%] p-1">Total</th>
-          <th className="w-[10%] p-1">Opc</th>
+          <th className="w-[5%] p-1">Cant</th>
+          <th className="w-[15%] p-1">Valor</th>
+          <th className="w-[15%] p-1">Total</th>
+          <th className="w-[5%] p-1">Opc</th>
         </tr>
       </thead>
       <tbody>
@@ -37,6 +37,7 @@ export function CartTable({ cart }: { cart: Cart }) {
           <td className="p-1 text-right">
             {numberFormatter.format(cantidadTotal)}
           </td>
+          <td></td>
           <td className="p-1 text-right">
             {currencyFormatter.format(valorTotal)}
           </td>

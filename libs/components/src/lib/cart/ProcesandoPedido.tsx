@@ -35,7 +35,7 @@ export function ProcesandoPedido({
 
   if (loading)
     return (
-      <div className="mb-4">
+      <div className="flex items-center justify-center py-6 w-full ">
         <Spinner />
       </div>
     );

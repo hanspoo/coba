@@ -22,15 +22,17 @@ export function CartItemList({ item, i }: { item: CartItem; i: number }) {
 
   return (
     <>
-      <Modal ref={ref} className="bg-secondary p-4">
+      <Modal ref={ref} className="bg-enutral p-4 border-2">
         <Modal.Header className="font-bold mb-2">Quitar producto</Modal.Header>
         <Modal.Body className="mb-5">
           ¿ Confirma quitar {item.name} de la canasta ?
         </Modal.Body>
         <Modal.Actions>
           <form method="dialog">
-            <Button className="mr-1">No</Button>
-            <Button onClick={removeProduct}>Si</Button>
+            <Button className="bg-secondary mr-1">No</Button>
+            <Button className="bg-primary" onClick={removeProduct}>
+              Si
+            </Button>
           </form>
         </Modal.Actions>
       </Modal>

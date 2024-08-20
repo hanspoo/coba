@@ -31,11 +31,11 @@ export function Header() {
         </div>
         <div className="flex items-center">
           <ShoppingCartAccess />
-          <UserCircleIcon className="w-6 text-white" />
         </div>
       </div>
-      <div className="bg-white h-10 flex items-center p-4 text-black">
-        <span className=" flex text-sm">+56 9 9427-51-15</span>
+      <div className="bg-white h-10 flex items-center justify-between p-4 text-black">
+        <span className=" text-sm">+56 9 9427-51-15</span>
+        <span className=" text-sm">info@zonacoba.cl</span>
       </div>
     </div>
   );

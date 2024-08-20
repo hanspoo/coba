@@ -104,7 +104,7 @@ export const FormPresupuesto = ({ cart }: Props) => {
 
   return (
     <div className="mb-10">
-      <h1 className="my-2 mb-4 font-bold text-2xl">Productos seleccionados</h1>
+      <h1 className="my-2 mb-4 font-bold text-2xl">Carrito de compras</h1>
       <CartTable cart={cart} />
       <h1 className="my-2 mb-4 font-bold text-2xl">Solicitar Presupuesto</h1>
       <Formik

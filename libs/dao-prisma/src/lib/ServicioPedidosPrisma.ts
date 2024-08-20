@@ -1,6 +1,5 @@
 import { Cart, ContactInfo, Pedido } from '@coba/api-interfaces';
 import { PrismaClient } from '@prisma/client';
-import { Prisma } from '.prisma/client/index.d';
 
 export class ServicioPedidosPrisma {
   async crearPedido(): Promise<Pedido> {

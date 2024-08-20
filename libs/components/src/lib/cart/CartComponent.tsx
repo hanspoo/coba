@@ -29,16 +29,18 @@ export function CartComponent({ cerrar, cart }: CartComponentProps) {
   };
 
   return (
-    <div className="bg-secondary cursor-default  border-2 shadow-lg z-[1000] p-2 min-h-80 w-11/12 min-w-[350px] lg:min-w-[400px] absolute top-8 -right-10 rounded-sm">
-      <Modal ref={refVaciar} className="bg-secondary">
+    <div className="bg-secondary text-secondary-content cursor-default  border-2 shadow-lg z-[1000] p-3 py-4 min-h-80 w-11/12 min-w-[350px] lg:min-w-[400px] absolute top-8 -right-10 rounded-sm">
+      <Modal ref={refVaciar} className="p-4 b-2">
         <Modal.Header className="font-bold mb-2">Vaciar Canasta</Modal.Header>
         <Modal.Body className="mb-5">
           Se borrarán todos los productos seleccionados
         </Modal.Body>
         <Modal.Actions>
           <form method="dialog">
-            <Button className="mr-1">No</Button>
-            <Button onClick={vaciar}>Si</Button>
+            <Button className="bg-secondary mr-1">No</Button>
+            <Button className="bg-primary" onClick={vaciar}>
+              Si
+            </Button>
           </form>
         </Modal.Actions>
       </Modal>
@@ -57,16 +59,16 @@ export function CartComponent({ cerrar, cart }: CartComponentProps) {
         </Modal.Actions>
       </Modal>
 
-      <h2 className="text-2xl mb-2">Shopping Cart</h2>
+      <h2 className="text-2xl mb-2">Carrito de compras</h2>
       {cart!.items.length === 0 && <p>No hay productos</p>}
       {cart?.items.length > 0 && <CartTable cart={cart} />}
       <div className="my-6">
         {cart!.items.length > 0 && (
-          <button className="btn mr-1" onClick={handleShowVaciar}>
+          <button className="bg-primary btn mr-1" onClick={handleShowVaciar}>
             Vaciar
           </button>
         )}
-        <button className="btn" onClick={cerrar}>
+        <button className="bg-primary btn" onClick={cerrar}>
           Cerrar
         </button>
         {cart!.items.length > 0 && (
