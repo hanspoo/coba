@@ -17,7 +17,7 @@ export const session = nextAppSession<MySessionData>({
     new RedisStoreFactory({
       client: new Redis({
         // The redis instance connection details
-        host: 'localhost',
+        host: process.env.REDIS_HOST || 'localhost',
         port: 6379,
       }),
       prefix: 'coba:', // having a prefix is optional but can be usefull if redis service is used by multiple applications
